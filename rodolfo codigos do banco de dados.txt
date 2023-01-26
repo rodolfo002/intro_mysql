@@ -1,0 +1,83 @@
+
+
+CREATE DATABASE rodolfo_faria_2023_roteiro_pratico_1;
+
+
+
+USE rodolfo_faria_2023_roteiro_pratico_1;
+
+
+CREATE TABLE clientes(
+
+id INTEGER PRIMARY KEY,
+nome VARCHAR(10),
+email VARCHAR(50),
+idade INTEGER
+
+);
+
+
+INSERT INTO clientes(id, nome , email , idade ) VALUES ( 2 , 'rodolfo' , 'rodolfo.fas02@hotmail.com' , 30 );
+INSERT INTO clientes(id, nome , email , idade ) VALUES ( 3 , 'rodolfo3' , 'rodolfo.fas03@hotmail.com' , 33 );
+INSERT INTO clientes(id, nome , email , idade ) VALUES ( 4 , 'rodolfo4' , 'rodolfo.fas04@hotmail.com' , 34 );
+INSERT INTO clientes(id, nome , email , idade ) VALUES ( 5 , 'rodolfo5' , 'rodolfo.fas05@hotmail.com' , 35 );
+INSERT INTO clientes(id, nome , email , idade ) VALUES ( 6 , 'rodolfo6' , 'rodolfo.fas06@hotmail.com' , 36 );
+INSERT INTO clientes(id, nome , email , idade ) VALUES ( 7 , 'rodolfo7' , 'rodolfo.fas07@hotmail.com' , 37 );
+INSERT INTO clientes(id, nome , email , idade ) VALUES ( 8 , 'rodolfo8' , 'rodolfo.fas08@hotmail.com' , 38 );
+INSERT INTO clientes(id, nome , email , idade ) VALUES ( 9 , 'rodolfo9' , 'rodolfo.fas09@hotmail.com' , 39 );
+INSERT INTO clientes(id, nome , email , idade ) VALUES ( 10 , 'rodolfo10' , 'rodolfo.fas10@hotmail.com' , 40 );
+INSERT INTO clientes(id, nome , email , idade ) VALUES ( 11 , 'rodolfo11' , 'rodolfo.fas11@hotmail.com' , 41 );
+INSERT INTO clientes(id, nome , email , idade ) VALUES (12 , 'rodolfo12' , 'rodolfo.fas12@hotmail.com' , 42 );
+INSERT INTO clientes(id, nome , email , idade ) VALUES ( 13 , 'rodolfo13' , 'rodolfo.fas13@hotmail.com' , 43 );
+INSERT INTO clientes(id, nome , email , idade ) VALUES ( 14 , 'rodolfo14' , 'rodolfo.fas14@hotmail.com' , 44 );
+INSERT INTO clientes(id, nome , email , idade ) VALUES ( 15 , 'rodolfo15' , 'rodolfo.fas15@hotmail.com' , 45 );
+INSERT INTO clientes(id, nome , email , idade ) VALUES ( 16 , 'rodolfo16' , 'rodolfo.fas16@hotmail.com' , 46 );
+INSERT INTO clientes(id, nome , email , idade ) VALUES ( 17 , 'rodolfo17' , 'rodolfo.fas17@hotmail.com' , 47 );
+INSERT INTO clientes(id, nome , email , idade ) VALUES ( 18 , 'rodolfo18' , 'rodolfo.fas18@hotmail.com' , 48 );
+INSERT INTO clientes(id, nome , email , idade ) VALUES ( 19 , 'rodolfo19' , 'rodolfo.fas19@hotmail.com' , 49 );
+INSERT INTO clientes(id, nome , email , idade ) VALUES ( 20 , 'rodolfo20' , 'rodolfo.fas20@hotmail.com' , 50 );
+INSERT INTO clientes(id, nome , email , idade ) VALUES ( 21 , 'rodolfo21' , 'rodolfo.fas21@hotmail.com' , 51 );
+
+4- SELECT * fROM clientes; 
+
+SELECT nome FROM clientes;
+
+SELECT idade FROM clientes;
+
+
+SELECT * FROM clientes WHERE id = 2;
+
+SELECT * fROM clientes  LIMIT 4;
+
+5- UPDATE clientes SET nome = "adevairvitorio" WHERE	id = 3;
+
+6-UPDATE clientes SET nome = "odeio banco de dados da silva" WHERE	id = 4;
+
+7- DELETE FROM clientes WHERE id =3
+
+
+
+CREATE TABLE veiculos (
+id INTEGER NOT NULL PRIMARY KEY,
+placa VARCHAR(11) NOT NULL,
+ano INTEGER
+);
+
+INSERT INTO veiculos (id, placa, ano) VALUES (10, 'MSE2321', 2008);
+
+INSERT INTO veiculos (id, placa, ano) VALUES (11, 'MSE2321', 2008);
+
+INSERT INTO veiculos (id, placa, ano) VALUES (12, 'MSE2321', 2008);
+
+INSERT INTO veiculos (id, placa, ano) VALUES (13, 'MSE2321', 2008);
+
+INSERT INTO veiculos (id, placa, ano) VALUES (14, 'MSE2321', 2008);
+
+INSERT INTO veiculos (id, placa, ano) VALUES (15, 'MSE2321', 2008);
+
+
+
+ALTER TABLE veiculos ADD FOREIGN KEY (id_cliente) REFERENCES clientes(id);
+
+
+
